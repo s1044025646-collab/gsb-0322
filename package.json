@@ -1,0 +1,17 @@
+{
+  "name": "raft-follower-log-check",
+  "version": "1.0.0",
+  "description": "Raft 跟随者 AppendEntries 前缀核对与冲突截断教学后端（仅 API 与 CLI）",
+  "type": "commonjs",
+  "main": "dist/cli.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/core.test.js dist/test/store.test.js",
+    "start": "node dist/src/cli.js serve",
+    "demo": "npm run build && node dist/src/cli.js demo"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}
